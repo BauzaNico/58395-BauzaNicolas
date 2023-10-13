@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+.navbar {
+  background: linear-gradient(to right, #030526, #02000d, #1b0140);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#cartWidget {
+  margin-inline: 2rem;
+  font-size: 1.3rem;
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contadorCartWidget {
+  position: absolute;
+  background-color: green;
+  padding-inline: 0.3rem;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  top: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#sectionCategorias {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 1rem;
 }
