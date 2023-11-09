@@ -1,23 +1,20 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./pages/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./pages/ItemdetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const categoria1 = "Paletas";
-  const categoria2 = "Zapatillas";
-  const categoria3 = "Outfit";
-  const categoria4 = "Accesorios";
-
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer
-        categoria1={categoria1}
-        categoria2={categoria2}
-        categoria3={categoria3}
-        categoria4={categoria4}
-      />
-    </>
+      {/* <ItemListContainer /> */}
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
