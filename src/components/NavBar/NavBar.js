@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import "../../App.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const NavBar = () => {
+  const { setTheme } = useContext(ThemeContext);
   return (
     <header>
       <nav
@@ -10,9 +13,9 @@ const NavBar = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link to={"/"} className="navbar-brand" href="#">
             E-GG!!
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -47,6 +50,14 @@ const NavBar = () => {
                 </a>
               </li>
             </ul>
+
+            <button
+              onClick={() =>
+                setTheme((value) => (value === "dark" ? "light" : "dark"))
+              }
+            >
+              Cambiar tema
+            </button>
           </div>
 
           <CartWidget />

@@ -1,18 +1,12 @@
-import { useRef, useState } from "react";
-
-const ItemCount = () => {
-  const [count, setCount] = useState(0); //este seria el contador del carrito
-
-  const renderCount = useRef(20); //Esto seria el stock disponible
-
+const ItemCount = ({ stock, count, setCount }) => {
   const onAdd = () => {
+    if (count === stock) return;
     setCount(count + 1);
-    renderCount.current--;
   };
 
   const onSubstract = () => {
+    if (count === 0) return;
     setCount(count - 1);
-    renderCount.current++;
   };
 
   return (
@@ -24,15 +18,19 @@ const ItemCount = () => {
       >
         -
       </button>
-      <h5>Stock disponible: {renderCount.current}</h5>
-      <button type="button" className="btn btn-sm btn-success" onClick={onAdd}>
-        +
+      <button type="button" className="btn btn-info">
+        {count}
       </button>
-      <div>
-        <button type="button" className="btn btn-info">
-          Agregar al carrito {count}
+      {count === stock ? null : (
+        <button
+          type="button"
+          className="btn btn-sm btn-success"
+          onClick={onAdd}
+        >
+          +
         </button>
-      </div>
+      )}
+      <div></div>
     </div>
   );
 };

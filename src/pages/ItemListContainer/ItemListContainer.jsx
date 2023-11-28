@@ -1,9 +1,11 @@
 import ItemCount from "../../components/ItemCount/ItemCount";
 import ItemList from "../../components/ItemList/ItemList";
-import { Await, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 
 const ItemListContainer = () => {
+  const colorTheme = useContext(ThemeContext);
   const [items, setItems] = useState([]);
   const { id } = useParams();
 
@@ -30,12 +32,17 @@ const ItemListContainer = () => {
     filteredProducts();
   }, [id]);
 
-  return (
-    <>
-      <ItemCount />
-      <ItemList items={items} />
-    </>
-  );
+  if (items.length > 0)
+    return (
+      <div
+        style={{
+          backgroundColor: colorTheme.theme === "dark" ? "gray" : "white",
+        }}
+      >
+        <ItemCount />
+        <ItemList items={items} />
+      </div>
+    );
 };
 
 export default ItemListContainer;

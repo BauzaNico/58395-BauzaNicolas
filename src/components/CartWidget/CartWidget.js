@@ -1,12 +1,14 @@
+import { useContext } from "react";
 import "../../App.css";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
-  let contador = 0;
+  const { productsQuantity } = useContext(CartContext);
 
   return (
     <button type="button" className="btn">
       <i id="cartWidget" className="fi fi-sr-cart-shopping-fast">
-        <b className="contadorCartWidget">{contador}</b>
+        <b className="contadorCartWidget">{productsQuantity}</b>
       </i>
     </button>
   );
