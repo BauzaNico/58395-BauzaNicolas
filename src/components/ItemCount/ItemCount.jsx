@@ -1,3 +1,5 @@
+import "./ItemCount.css";
+
 const ItemCount = ({ stock, count, setCount }) => {
   const onAdd = () => {
     if (count === stock) return;
@@ -11,22 +13,14 @@ const ItemCount = ({ stock, count, setCount }) => {
 
   return (
     <div>
-      <button
-        type="button"
-        className="btn btn-sm btn-warning"
-        onClick={onSubstract}
-      >
+      <button type="button" className="btn btnSubstrack" onClick={onSubstract}>
         -
       </button>
-      <button type="button" className="btn btn-info">
+      <button type="button" className="btn btnCount">
         {count}
       </button>
       {count === stock ? null : (
-        <button
-          type="button"
-          className="btn btn-sm btn-success"
-          onClick={onAdd}
-        >
+        <button type="button" className="btn btnAdd" onClick={onAdd}>
           +
         </button>
       )}

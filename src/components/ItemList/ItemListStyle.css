@@ -1,0 +1,9 @@
+.itemListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}

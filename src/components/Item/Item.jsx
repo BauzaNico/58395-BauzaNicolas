@@ -1,16 +1,28 @@
-const Item = ({ title, price, description, image }) => {
+import "./itemStyle.css";
+
+const Item = ({
+  title,
+  price,
+  description,
+  image,
+  quantity,
+  action,
+  button,
+}) => {
   return (
-    <div className="">
-      <img
-        alt={title}
-        src={image}
-        style={{ width: "100px", height: "100px" }}
-      />
+    <div className="cardItem">
+      <img alt={title} src={image} />
+
       <div>
         <h3>{title}</h3>
-        <p>{description}</p>
       </div>
-      <h6>{price}</h6>
+      <h6>${price}</h6>
+      {action && button && (
+        <button className="btn" onClick={() => action()}>
+          {button}
+        </button>
+      )}
+      {quantity && <span>Cantidad: {quantity}</span>}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "../../App.css";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContext";
 
 const NavBar = () => {
@@ -16,68 +16,39 @@ const NavBar = () => {
           <Link to={"/"} className="navbar-brand" href="#">
             E-GG!!
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </a>
-              </li>
-            </ul>
 
+          <section id="sectionCategorias">
+            <div className="list-group list-group-horizontal">
+              <NavLink to="/category/paleta" className="list-group-item">
+                Paletas
+              </NavLink>
+              <NavLink to="/category/zapatilla" className="list-group-item">
+                Zapatillas
+              </NavLink>
+              <NavLink to="/category/outfit" className="list-group-item">
+                Outfit
+              </NavLink>
+              <NavLink to="/category/accesorios" className="list-group-item">
+                Accesorios
+              </NavLink>
+            </div>
+          </section>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
             <button
+              className="btn btn-dark"
+              type="button"
               onClick={() =>
-                setTheme((value) => (value === "dark" ? "light" : "dark"))
+                setTheme((value) => (value === "ligth" ? "dark" : "ligth"))
               }
             >
               Cambiar tema
             </button>
           </div>
-
-          <CartWidget />
+          <Link to={"/cart"}>
+            <CartWidget />
+          </Link>
         </div>
-        <section id="sectionCategorias">
-          <div className="list-group list-group-horizontal">
-            <Link to="/category/electronics" className="list-group-item">
-              Paletas
-            </Link>
-            <Link to="/category/jewelery" className="list-group-item">
-              Zapatillas
-            </Link>
-            <Link to="/category/men's_clothing" className="list-group-item">
-              Outfit
-            </Link>
-            <Link to="/category/women's_clothing" className="list-group-item">
-              Accesorios
-            </Link>
-          </div>
-        </section>
       </nav>
     </header>
   );

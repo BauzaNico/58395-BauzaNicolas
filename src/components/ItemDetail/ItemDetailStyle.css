@@ -1,0 +1,10 @@
+#itemDetailContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 2rem;
+}
+
+#itemDetailContainer img {
+  max-width: 25rem;
+}
