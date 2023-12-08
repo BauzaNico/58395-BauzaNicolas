@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+##Endless-gg (E-GG) - Tu destino para artículos de pádel sin límites
+  #Descripción
+    Bienvenido a Endless-gg (E-GG), tu plataforma de comercio electrónico exclusiva para productos de pádel. Sumérgete en el mundo del pádel y descubre una amplia gama de productos     de alta calidad, desde palas de pádel hasta ropa y accesorios.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  #Características Principales
+    Exploración sin Fin: Navega a través de nuestro catálogo de productos de pádel y encuentra todo lo que necesitas para mejorar tu juego.
 
-## Available Scripts
+    Filtrado por Categorías: Simplifica tu búsqueda utilizando nuestras categorías intuitivas para encontrar rápidamente los productos que se adaptan a tus necesidades.
 
-In the project directory, you can run:
+    Carrito de Compras: Agrega tus productos favoritos al carrito de compras y mantén un control total sobre tus selecciones.
 
-### `npm start`
+    Gestión del Carrito: Elimina productos individualmente, vacía todo el carrito o procede con la compra para llevar tu experiencia de compra al siguiente nivel.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Proceso de Compra sin Problemas: Completa tu compra de manera fácil y rápida, generando una orden que quedará registrada en nuestra base de datos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##Cómo Empezar
+  #Clona el Repositorio:
+    git clone https://github.com/BauzaNico/58395-BauzaNicolas.git
+    
+##Instala Dependencias:
+    cd endless-gg
+    npm install
+    
+##Inicia la Aplicación:
+    npm start
+    
+##Explora y Disfruta:
+    Abre tu navegador y visita http://localhost:3000
 
-### `npm test`
+Contribuciones
+¡Endless-gg es un proyecto en constante evolución y apreciamos tus contribuciones! Si tienes ideas para mejorar la aplicación, no dudes en enviar un pull request.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
