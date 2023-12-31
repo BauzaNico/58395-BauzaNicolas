@@ -55,7 +55,7 @@ const Cart = () => {
     addDoc(orderSnapshot, newOrder)
       .then((res) => {
         updateProductStock();
-        alert("Your Order has been placed!");
+        alert(`Tu orden fue exitosa! ID: ${res.id}`);
         clearCart();
         navigate("/");
       })
